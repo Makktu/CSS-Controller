@@ -4,13 +4,22 @@
     box-sizing: border-box;
 }
 
+@keyframes arrow-clicked {
+    50% {
+        color: rgb(112, 138, 112);
+    }
+    100% {
+        color: greenyellow;
+    }
+}
+
 body {
     font-family: "Roboto", sans-serif;
     display: flex;
     margin: 0;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     height: 100vh;
     overflow: hidden;
     /* my dark styling */
@@ -38,4 +47,12 @@ body {
     margin: 0px 20px;
     text-align: center;
     cursor: pointer;
+}
+
+.arrows:hover {
+    color: yellow;
+}
+
+.arrow-clicked {
+    animation: arrow-clicked 1s;
 }
