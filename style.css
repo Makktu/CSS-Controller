@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-    height: 100vw;
+    height: 95vw;
     width: 100vw;
     border: 2px yellow solid;
 }
@@ -58,4 +58,29 @@ body {
 
 .arrow-clicked {
     animation: arrow-clicked 1s;
+}
+
+.shape {
+    border-radius: 5px;
+}
+
+.red {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+}
+.blue {
+    background-color: skyblue;
+    height: 100px;
+    width: 100px;
+}
+.green {
+    background-color: green;
+    height: 100px;
+    width: 100px;
+}
+.yellow {
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
 }
