@@ -19,16 +19,16 @@ body {
     margin: 0;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     background-color: rgb(19, 17, 17);
     color: rgb(236, 222, 222);
 }
 
 .container {
-    height: 95vw;
+    height: 90vw;
     width: 100vw;
-    border: 2px yellow solid;
+    /* border: 2px yellow solid; */
 }
 
 .display {
@@ -37,7 +37,7 @@ body {
 }
 
 .controls {
-    border-top: 2px yellow solid;
+    /* border-top: 2px yellow solid; */
 }
 
 .up-arrow,
