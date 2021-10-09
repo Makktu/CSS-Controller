@@ -1,6 +1,24 @@
 "use strict";
 
-function getThisSquare(currentSquare) {
+class Square {
+    constructor(height, width, color) {
+        this.height = height;
+        this.width = width;
+        this.color = color;
+
+        (function () {
+            console.log("This could work");
+        })();
+    }
+}
+
+const redSquare = new Square(50, 50, "red");
+
+// *******************************************
+// ********** OLD CODE ***********************
+// *******************************************
+
+/* function getThisSquare(currentSquare) {
     if (currentSquare === 0) {
         thisOnePlease = redSquare;
     } else if (currentSquare === 1) {
@@ -89,4 +107,4 @@ let height = 50;
 let transAmt = 25;
 
 let squares = ["redSquare", "blueSquare", "greenSquare", "yellowSquare"];
-let currentSquare = 0;
+let currentSquare = 0; */
