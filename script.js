@@ -1,5 +1,17 @@
 "use strict";
 
+class Square {
+    constructor(height, width, color) {
+        this.height = height;
+        this.width = width;
+        this.color = color;
+    }
+
+    changeSize(direction) {
+        this.height +=
+    }
+}
+
 function getThisSquare(currentSquare) {
     if (currentSquare === 0) {
         thisOnePlease = redSquare;
@@ -13,16 +25,15 @@ function getThisSquare(currentSquare) {
 }
 
 function animateArrow(e, direction) {
-    console.log(this);
     e.target.classList.add("arrow-clicked");
     setTimeout(function () {
         e.target.classList.remove("arrow-clicked");
     }, 1100);
 
-    if (direction === 1 && height === transAmt) return;
-    if (direction === 4 && width === transAmt) return;
-    if (direction === 2 && width === 375) return;
-    if (direction === 3 && height === 350) return;
+    // if ((direction === 1 || direction === 3) && height === transAmt) return;
+    // if ((direction === 4 || direction === 2) && width === transAmt) return;
+    // if (direction === 2 && width === 375) return;
+    // if (direction === 3 && height === 350) return;
 
     getThisSquare(currentSquare);
 
