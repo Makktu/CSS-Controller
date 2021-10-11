@@ -1,92 +1,116 @@
 "use strict";
 
-function getThisSquare(currentSquare) {
-    if (currentSquare === 0) {
-        thisOnePlease = redSquare;
-    } else if (currentSquare === 1) {
-        thisOnePlease = blueSquare;
-    } else if (currentSquare === 2) {
-        thisOnePlease = greenSquare;
-    } else thisOnePlease = yellowSquare;
+class Square {
+    constructor(height, width, color) {
+        this.height = height;
+        this.width = width;
+        this.color = color;
+    }
 
-    return thisOnePlease;
+    notice() {
+        console.log(`${this.color} square object created successfully.`);
+    }
 }
 
-function animateArrow(e, direction) {
-    console.log(this);
-    e.target.classList.add("arrow-clicked");
-    setTimeout(function () {
-        e.target.classList.remove("arrow-clicked");
-    }, 1100);
+const redSquare = new Square(50, 50, "red");
+const blueSquare = new Square(50, 50, "blue");
+const yellowSquare = new Square(50, 50, "yellow");
+const greenSquare = new Square(50, 50, "green");
 
-    if (direction === 1 && height === transAmt) return;
-    if (direction === 4 && width === transAmt) return;
-    if (direction === 2 && width === 375) return;
-    if (direction === 3 && height === 350) return;
+redSquare.notice();
+blueSquare.notice();
+yellowSquare.notice();
+greenSquare.notice();
 
-    getThisSquare(currentSquare);
+// **********************************
 
-    if (direction === 2) {
-        width += transAmt;
-        thisOnePlease.style.cssText = `height: ${height}px; width: ${width}px;transition:.3s ease;`;
-    }
-    if (direction === 4) {
-        width -= transAmt;
-        thisOnePlease.style.cssText = `height: ${height}px; width: ${width}px;transition:.3s ease;`;
-    }
-    if (direction === 1) {
-        height -= transAmt;
-        thisOnePlease.style.cssText = `height: ${height}px; width: ${width}px;transition:.3s ease;`;
-    }
-    if (direction === 3) {
-        height += transAmt;
-        thisOnePlease.style.cssText = `height: ${height}px; width: ${width}px; transition:.3s ease;`;
-    }
+// function getThisSquare(currentSquare) {
+//     if (currentSquare === 0) {
+//         thisOnePlease = redSquare;
+//     } else if (currentSquare === 1) {
+//         thisOnePlease = blueSquare;
+//     } else if (currentSquare === 2) {
+//         thisOnePlease = greenSquare;
+//     } else thisOnePlease = yellowSquare;
 
-    btnClick.play();
-    thisOnePlease.classList.remove("active-border");
-    currentSquare++;
-    if (currentSquare === 4) currentSquare = 0;
-    getThisSquare(currentSquare);
-    thisOnePlease.classList.add("active-border");
+//     return thisOnePlease;
+// }
 
-    console.log(height, width);
-}
+// function animateArrow(e, direction) {
+//     console.log(this);
+//     e.target.classList.add("arrow-clicked");
+//     setTimeout(function () {
+//         e.target.classList.remove("arrow-clicked");
+//     }, 1100);
 
-const leftArrow = document.querySelector(".fa-arrow-left");
+//     if (direction === 1 && height === transAmt) return;
+//     if (direction === 4 && width === transAmt) return;
+//     if (direction === 2 && width === 375) return;
+//     if (direction === 3 && height === 350) return;
 
-const rightArrow = document.querySelector(".fa-arrow-right");
-const upArrow = document.querySelector(".fa-arrow-up");
-const downArrow = document.querySelector(".fa-arrow-down");
+//     getThisSquare(currentSquare);
 
-const btnClick = new Audio("sound/btn-click.flac");
+//     if (direction === 2) {
+//         width += transAmt;
+//         thisOnePlease.style.cssText = `height: ${height}px; width: ${width}px;transition:.3s ease;`;
+//     }
+//     if (direction === 4) {
+//         width -= transAmt;
+//         thisOnePlease.style.cssText = `height: ${height}px; width: ${width}px;transition:.3s ease;`;
+//     }
+//     if (direction === 1) {
+//         height -= transAmt;
+//         thisOnePlease.style.cssText = `height: ${height}px; width: ${width}px;transition:.3s ease;`;
+//     }
+//     if (direction === 3) {
+//         height += transAmt;
+//         thisOnePlease.style.cssText = `height: ${height}px; width: ${width}px; transition:.3s ease;`;
+//     }
 
-const redSquare = document.querySelector(".red");
-const blueSquare = document.querySelector(".blue");
-const greenSquare = document.querySelector(".green");
-const yellowSquare = document.querySelector(".yellow");
+//     btnClick.play();
+//     thisOnePlease.classList.remove("active-border");
+//     currentSquare++;
+//     if (currentSquare === 4) currentSquare = 0;
+//     getThisSquare(currentSquare);
+//     thisOnePlease.classList.add("active-border");
 
-upArrow.addEventListener("click", (e) => {
-    animateArrow(e, 1);
-});
-downArrow.addEventListener("click", (e) => {
-    animateArrow(e, 3);
-});
-leftArrow.addEventListener("click", (e) => {
-    animateArrow(e, 4);
-});
+//     console.log(height, width);
+// }
 
-rightArrow.addEventListener("click", (e) => {
-    animateArrow(e, 2);
-});
+// const leftArrow = document.querySelector(".fa-arrow-left");
 
-let thisOnePlease;
+// const rightArrow = document.querySelector(".fa-arrow-right");
+// const upArrow = document.querySelector(".fa-arrow-up");
+// const downArrow = document.querySelector(".fa-arrow-down");
 
-// * THE SQUARES
+// const btnClick = new Audio("sound/btn-click.flac");
 
-let width = 50;
-let height = 50;
-let transAmt = 25;
+// const redSquare = document.querySelector(".red");
+// const blueSquare = document.querySelector(".blue");
+// const greenSquare = document.querySelector(".green");
+// const yellowSquare = document.querySelector(".yellow");
 
-let squares = ["redSquare", "blueSquare", "greenSquare", "yellowSquare"];
-let currentSquare = 0;
+// upArrow.addEventListener("click", (e) => {
+//     animateArrow(e, 1);
+// });
+// downArrow.addEventListener("click", (e) => {
+//     animateArrow(e, 3);
+// });
+// leftArrow.addEventListener("click", (e) => {
+//     animateArrow(e, 4);
+// });
+
+// rightArrow.addEventListener("click", (e) => {
+//     animateArrow(e, 2);
+// });
+
+// let thisOnePlease;
+
+// // * THE SQUARES
+
+// let width = 50;
+// let height = 50;
+// let transAmt = 25;
+
+// let squares = ["redSquare", "blueSquare", "greenSquare", "yellowSquare"];
+// let currentSquare = 0;

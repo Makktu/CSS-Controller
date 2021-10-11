@@ -37,7 +37,8 @@ body {
 }
 
 .controls {
-    /* border-top: 2px yellow solid; */
+    border-top: 2px yellow solid;
+    border-bottom: 2px blueviolet solid;
 }
 
 .up-arrow,
