@@ -12,7 +12,11 @@ class Square {
     }
 }
 
-const redSquare = new Square(50, 50, "red");
+// const redSquare = new Square(50, 50, "red");
+
+(function () {
+    console.log("And this could work");
+})();
 
 // *******************************************
 // ********** OLD CODE ***********************
